@@ -1,5 +1,5 @@
 workspace "DK.Vendor"
-	architecture "x64"
+	architecture "arm64"
 	
 	configurations
 	{
@@ -37,10 +37,26 @@ workspace "DK.Vendor"
 		}
 			
 		filter "configurations:Debug"
+			defines 
+			{
+				"LOG_TO_UNITY_CONSOLE",
+				"DK_LOG"
+			}
 			symbols "Off"
 			
 		filter "configurations:Release"
+			defines
+			{
+				"DK_LOG",
+				"ENCRYPT_LOG"
+			}
 			optimize "On"
 			
 		filter "configurations:Dist"
+			defines
+			{
+				"DK_LOG",
+				"ENCRYPT_LOG"
+			}
 			optimize "On"
+			

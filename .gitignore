@@ -1,0 +1,14 @@
+# Visual Studio cache directory
+.vs/
+bin/
+bin-int/
+
+# Visual Studio files
+*.sln
+*.vcxproj
+*.vcxproj.filters
+
+*.csproj
+
+# Files
+*.user
